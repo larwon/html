@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<title>HTML+PHP</title>
+	</head>
+	<body>
+		<form name=formtest method=post action=index0601.php>
+		아이디<input name=id type=text size=10 value=guest><br>
+		비밀번호<input name=password type=password size=10 value=><br>
+		<input name=result type=submit size=10 value=전송>
+		<input name=again type=reset size=10 value=리셋>
+		</form>
+	</body>
+</html>
+
+<php?
+	echo "아이디 : $id, 비밀번호 : $password";
+?>
