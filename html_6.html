@@ -1,0 +1,304 @@
+<!-- HTML문서임을 정의 -->
+<!DOCTYPE html>
+<!-- html - head - body-->
+<!--html안에 lang으로 언어를 선언해줘야함-->
+<html lang="UTF-8">
+<!--head는 메타정보(메타데이터)를 포함-->
+<head> 
+    <!--head태그 안에 title존재-->
+    <!--title은 제목표시줄이나 페이지탭에 표시되는 html페이지 제목-->
+    <title>Page Title</title>
+<!--head안에 style을 정의해서 전역으로 영향을 받을 수 있도록 지정 (내부css)-->
+<!--외부css는 link rel을 통해 사용, .css를 사용-->
+<!--padding은 텍스트와 테두리 사이(내부)의 공백을 정의-->
+<!--margin은 테두리 외부의 공백을 정의-->
+<!--border-collapse를 추가하여 테두리가 하나의 테두리로 축소되도록 함-->
+<!--border-spacing로 테두리 안에 작은 테두리를 만듦, collape가 있으면 spacing은 안됨-->
+
+<style>
+    body {background-color: aqua;}
+    h1 {color: blue;}
+    p {
+        color: white;
+        margin: 50px;
+        }
+    h6 {
+        border: 2px solid Tomato;
+        padding: 30px;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+        
+    }
+
+    th, td {
+        padding: 15px;
+    }
+
+    th {
+        text-align: left;
+    }
+    
+    table {
+        border-spacing: 15px;
+    }
+
+    #t01 {
+        width: 100%;
+        background-color: #f1f1c1;
+    }
+
+    .city {
+        background-color: tomato;
+        color: white;
+        border: 2px solid black;
+        margin: 20px;
+        padding: 20px;
+    }
+
+    #myHeader {
+        background-color: lightblue;
+        color: black;
+        padding: 40px;
+        text-align: center;
+    }
+</style>
+</head>
+<!--body는 문서의 본문을 정의-->
+<!--이미지/단락/하이퍼링크/테이블/리스트 등 모든 가시적인 컨텐츠의 집합소-->
+<!--페이지의 배경색을 powderblue로 설정함-->
+<!--style을 사용하여 두 가지 다른 요소의 배경색을 설정함-->
+<!--style의 font-family는 글꼴을 정의함-->
+<!--size는 텍스트의 크기를 정의-->
+<!--style="text-align: center;"-->
+<body style="background-color: powderblue;">    
+    <!--h1~6까지 제목의 크기를 정의-->
+    <!--1이 가장 큼-->
+    <!--style로 폰트사이즈 변경-->
+    <h1 style="font-size: 60px;">My First Heading</h1>
+    <h2 style="font-family: Verdana;">My First Heading</h2>
+    <h3 style="font-family: 'Courier';">My First Heading</h3>
+    <h4 style="text-align: center;">My First Heading</h4>
+    <!--텍스트 색상-->
+    <h5 style="color:MediumSeagreen">My First Heading</h5>
+    <!--테두리 색상-->
+    <h6>My First Heading</h6>
+    
+    <!--요소의 문단을 정의-->
+    <p style="background-color: tomato;">My first paragraph.</p>
+
+    <!--<pre></pre>는 태그로 감싼 문장은 입력한 문장 형태 그대로 브라우저에 보여줌-->
+    <!--<hr>은 수평선을 그어 구분을 지어줌-->
+    <pre>
+        <!--strong과 b는 모두 볼드처리가 되지만 strong은 문단에서 강조
+        b는 그냥 볼드처리-->
+        <!--mark는 형관팬처리-->
+        <strong><mark>안녕</mark>하세요</strong>
+        <hr>
+        <!--del은 삭제처리로 중간줄이 그어짐-->
+        <!--ins는 삽입된 텍스트를 정의, 밑줄을 그음-->
+        <b><del>반갑</del><ins>환영</ins>습니다</b>
+        <hr>
+        <!--i와 em 모두 기울림이지만 i는 전문용어 등을 표시할때
+        em은 일반적인 기울임-->    
+        <i>감사합니다</i>
+        <em>행복하세요</em>
+        <hr>
+        <!--sub는 아래 첨자 텍스트로 주로 화학식에 사용할 수 있음-->
+        H<sub>2</sub>0
+        <hr>
+        <!--sup는 위첨자로 각주처리에 사용할 수 있음-->
+        www<sup>[1]</sup>
+    </pre>
+
+    <!--<a href="ULR"></a>형식으로 주로 사용-->
+    <!--taget에서 _blank는 새 창 또는 새 탭에서 링크된 문서를 엽니다.-->
+    <!--절대경로(웹주소(WWW))와 상대경로(WWW 제외)-->
+    <p><a href="https://www.naver.com" target="_self">네이버</a></p>
+    <!--링크된 주소를 이미지로 바꿀 수 있다.-->
+    <p><a href="default.asp"><img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;"></a></p>
+    <!--이메일 주소에 링크-->
+    <p><a href="mailto:someone@example.com">Send email</a></p>
+    <!--html에 버튼을 링크로 사용하려면 자바스크립트가 필요함-->
+    <p><button onclick="document.location='default.asp'">HTML Tutorial</button></p>
+    <!--링크 주소에 제목을 붙여줌-->
+    <p><a href="www.naver.com" title="Go To Naver">visit naver</a></p>
+
+    <!--id를 이용하여 동일한 페이지 내에서 책갈피에 대한 링크를 추가-->
+    <!--id = "책갈피 값을 정의 " -->
+    <!--href #C4는 그쪽으로 이동-->
+    <p><h2 id="C4">Chapter 4</h2></p>
+    <p><a href="#C4">Jump to Chapter 4</a></p>
+
+
+    <!--src: 이미지에 대한 경로(URL)를 지정(소스파일)-->
+    <!--alt: 이미지를 볼 수 없을 경우 대체 텍스트-->
+            <!--alt(alternate)는 대체하다라는 뜻-->
+            <!--이미지가 나오지 않을 때 대안-->
+    <!--width: 가로크기-->
+    <!--height: 세로크기-->
+    <p><img src="~.jpg" alt="~~~" width="100" height="100"></p>
+
+    <!--이미지를 활용한 링크연결-->
+    <!--float를 쓰고 right/left를 쓰면 이미지의 위치가 이동-->
+    <p><a href="default.asp">
+        <img src="smiley.gif" alt="HTML tutorial" style="float:left; width:42px; height:42px;">
+    </a></p> 
+
+    <!--br: 한줄 자동 개행-->
+    <p>자동 개행<br>입니다.</p>
+
+    <!--style로 색상을 표현-->
+    <p style="color:red;">This is a red paragraph.</p>
+
+    <!--title 속성은 요소 위에 마우스를 올려놓으면 속성값이 표시됨-->
+    <p title="I'm a tooltip">This is a paragraph.</p>
+
+    <!--html 기본 정보-->
+    <!--html은 대소문자를 구분하지 않음, 주로 소문자를 권장함-->
+    <!--속성은 추가정보를 제공하며, name="value"와 같은 이름으로 제공-->
+    <!--속성의 내용을 큰따옴표와 작은따옴표를 상황에 맞게 사용하는 것이 좋다-->
+
+    <!--<map>은 이미지 맵을 생성하는데 사용, 필요한 이미지 링크는 name을 사용-->
+    <!--shape로 모양을 정의, 이후 coords로 위치영역을 정의-->
+    <!--rect : 직사각형 영역을 정의-->
+    <!--circle : 원형 영역을 정의-->
+    <!--poly : 다각형 영역을 정의-->
+    <!--default : 전체 지역을 정의-->
+    <map name="workmap">
+        <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm"></area>
+    </map>
+
+
+    <!--th : 제목, td : 내용-->
+    <!--table의 id를 정의하여 style에 정의한다-->
+    <table id="t01" style="width:100%">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
+    </table>
+    <!--colspan : 셀이 둘 이상의 열에 걸쳐 있도록하려면 다음 colspan속성을 사용-->
+    <table>
+        <tr>
+            <th>Name</th>
+            <th colspan="2">Telephone</th>
+        </tr>
+        <tr>
+            <td>Bill Gates</td>
+            <td>55566854</td>
+            <td>55577855</td>
+        </tr>
+    </table>
+    <!--rowspan : 셀을 두개 이상의 행으로 확장하려면 rowspan을 사용-->
+    <!--caption : 표에 캡션을 추가하려면 caption태그를 사용-->
+    <table>
+        <caption>Monthly savings</caption>
+        <tr>
+            <th>Name</th>
+            <td>Bill Gates</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Telephone</th>
+            <td>55566854</td>
+        </tr>
+        <tr>
+            <td>55577855</td>
+        </tr>
+    </table>
+
+    <!--ol은 번호로 순번을 정리-->
+    <!--ol에 type을 넣으면 순번번호를 로마자나 영어 등으로 바꿀 수 있다.-->
+    <!--ol에 start에 원하는 숫자를 넣으면 그 숫자부터 카운터가 시작-->
+    <!--li은 리스트-->
+    <ol type="I">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
+
+    <!--ul은 번호가 아닌 정렬, 작은 검은색 채워진 원으로 표시(디폴트, disc)-->
+    <!-- style="list-style-type: "을 정의하고 disc(채워진 원)/circle(빈 원)/square(채워진 상자)/none-->
+
+    <ul style="list-style-type: circle;">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+
+    <!--목록 중첩-->
+    <!--ul, ol 둘다 가능-->
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+            <ul>
+                <li>Black tea</li>
+                <li>Green tea</li>
+            </ul>
+        </li>
+        <li>Milk</li>    
+    </ul>
+
+
+    <!--dl은 상기 설명 목록 정의-->
+    <!--dt : 용어(이름)을 정의-->
+    <!--dd : 용어의 설명-->
+    <dl>
+        <dt>Coffee</dt>
+        <dd>- black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>- white cold drink</dd>
+    </dl>
+
+    <!--div와 span은 영역을 설정하는데 사용-->
+    <!--div는 줄바꿈이 가능, span은 줄바꿈이 가능x(옆으로 붙음)-->
+    <!--div는 레이아웃(block)을 나누는데 주로 사용(구역을 나누는데)-->
+    <div>
+        <p>hello</p>
+        <p>안녕</p>
+    </div>
+    <!--span은 inline(문장단위)을 기준으로 나눔-->
+    <span>span1</span>
+    <span>span2</span>
+    <span>span3</span>
+
+
+    <!--클래스-->
+    <!--style태그에서 class명을 ".이름"으로 해서 스타일을 지정-->
+    <div class="city">
+        <h2>London</h2>
+        <p>London is good</p>
+    </div>
+
+    <div class="city">
+        <h2>Paris</h2>
+        <p>Paris is good</p>
+    </div>
+
+    <div class="city">
+        <h2>Seoul</h2>
+        <p>Seoul is good</p>
+    </div>
+
+    <!--아이디-->
+    <!--style태그에서 id명을 "#이름"으로 해서 스타일을 지정-->
+    <!--한 페이지에 한 id만 사용가능-->
+    <h1 id="myHeader">My Header</h1>
+
+
+    <!--iframe은 인라인프레임을 지정, 현재 html 문서 내에 다른 문서를 포함하는 데 사용-->
+    <iframe src="URL" style="height:200px;width:300px;" title="description"></iframe>
+</body>
+</html>
